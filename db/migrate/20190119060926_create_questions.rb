@@ -7,6 +7,7 @@ class CreateQuestions < ActiveRecord::Migration[5.1]
       t.string :address
       t.string :tel
       t.string :email
+      t.boolean :checked, default: false
 
       t.timestamps
     end
