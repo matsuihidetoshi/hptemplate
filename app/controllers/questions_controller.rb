@@ -28,4 +28,5 @@ class QuestionsController < ApplicationController
     permit(:title, :content, :name, :address, :tel, :email)
   end
 
+
 end
