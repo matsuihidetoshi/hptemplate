@@ -51,4 +51,4 @@ production:
   <<: *default
   database: hptemplate_production
   username: hptemplate
-  password: <%= ENV['HPTEMPLATE_DATABASE_PASSWORD'] %>
+  password: hidetoshi0424
