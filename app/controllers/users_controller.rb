@@ -44,9 +44,13 @@ class UsersController < ApplicationController
   end
 
   def destroy
-    @user = User.find(params[:id])
-    @user.destroy
-    flash[:success] = '管理者を削除しました。'
+    if User.all.length > 1
+      @user = User.find(params[:id])
+      @user.destroy
+      flash[:success] = '管理者を削除しました。'
+    else
+      flash[:danger] = '管理者が1人しか登録されていないため、削除できません。'
+    end
     redirect_to users_path
   end
 

@@ -17,7 +17,10 @@
           <li><a href="#">サービス案内</a></li>
           <li><a href="#">代表挨拶</a></li>
           <li><a href="#">採用情報</a></li>
-          <li><a href="#">お問い合わせ</a></li>
+          <li><%= link_to 'お問い合わせ', new_question_path %></li>
+          <% if logged_in? %>
+            <li><%= link_to 'ログアウト', logout_path, method: :delete %></li>
+          <% end %>
         </ul>
       </div>
     </div>
