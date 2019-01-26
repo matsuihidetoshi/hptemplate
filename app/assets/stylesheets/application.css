@@ -80,3 +80,7 @@ footer small {
     padding: 8px 0;
     color: #fff;
 }
+
+.footer-blank {
+  height: 400px;
+}

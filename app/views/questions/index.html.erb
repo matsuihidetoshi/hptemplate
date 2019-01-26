@@ -12,12 +12,14 @@
             <th>件名</th>
             <th></th>
           </tr>
+          <% i = 0 %>
           <% @questions.each do |question| %>
-          <tr>
-            <td><%= question.created_at.strftime("%Y年%m月%d日 %H:%M:%S") %></td>
-            <td><%= question.title.truncate(28) %></td>
-            <td><%= link_to '詳細', question, class: 'btn btn-xs btn-primary' %></td>
-          </tr>
+            <tr>
+              <td><%= question.created_at.strftime("%Y年%m月%d日 %H:%M:%S") %></td>
+              <td><%= question.title.truncate(28) %></td>
+              <td><%= link_to '詳細', question, class: 'btn btn-xs btn-primary' %></td>
+            </tr>
+            <% i += 1 %>
           <% end %>
         </table>
       <%= paginate @questions %>
@@ -25,3 +27,6 @@
   </div>
 </div>
 <div class="return-link"><%= link_to '管理ページトップに戻る', users_path %></div>
+<% if @questions.length < 10 %>
+  <div class="footer-blank"></div>
+<% end %>
