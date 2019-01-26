@@ -1,7 +1,7 @@
 class Question < ApplicationRecord
   #Validations
   validates :title, presence: true, length: { maximum: 100 }
-  validates :content, presence: true, length: { maximum: 255 }
+  validates :content, presence: true, length: { maximum: 9999 }
   validates :name, presence: true, length: { maximum: 100 }
   validates :address, presence: true, allow_blank: true, length: { maximum: 100 }
   VALID_TEL_REGEX =

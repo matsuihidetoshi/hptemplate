@@ -1,2 +1,57 @@
-<h1>Questions#show</h1>
-<p>Find me in app/views/questions/show.html.erb</p>
+<div class="text-center">
+  <h1>お問い合わせ詳細</h1>
+</div>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <table border="2">
+      <tr>
+        <th>件名</th>
+        <td><%= @question.title %></td>
+      </tr>
+      <tr>
+        <th>お名前</th>
+        <td><%= @question.name %> 様</td>
+      </tr>
+      <tr>
+        <th>メールアドレス</th>
+        <td><%= @question.email %></td>
+      </tr>
+      <tr>
+        <th>お電話番号</th>
+        <td><%= @question.tel %></td>
+      </tr>
+      <tr>
+        <th>ご住所</th>
+        <td><%= @question.address %></td>
+      </tr>
+      <tr>
+        <th>お問い合わせ内容</th>
+        <td><%= simple_format(h(@question.content)) %></td>
+      </tr>
+      <tr>
+        <th>ステータス</th>
+        <td>
+          <% if @question.checked %>
+            <span style="color:green;font-weight:bold;">回答済</span>
+          <% else %>
+            <span style="color:red;font-weight:bold;">未回答</span>
+          <% end %>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <% if @question.checked %>
+            <%= link_to '未回答にする', question_path(@question, check: 1),
+            {class: 'btn btn-block btn-warning', data: {confirm: '未回答にしますか？' }} %>
+          <% else %>
+            <%= link_to '回答済にする', question_path(@question, check: 2),
+            {class: 'btn btn-block btn-success', data: {confirm: '回答済にしますか？'}}%>
+          <% end %>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+<div class="return-link"><%= link_to 'お問い合わせ一覧に戻る', questions_path %></div>
+<div class="return-link"><%= link_to '管理ページトップに戻る', users_path %></div>

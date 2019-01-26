@@ -9,6 +9,13 @@ class QuestionsController < ApplicationController
 
   def show
     @question = Question.find(params[:id])
+    if params[:check].to_i == 1
+      @question.update_attributes(checked: false)
+      flash.now[:success] = '未回答にしました。'
+    elsif params[:check].to_i == 2
+      @question.update_attributes(checked: true)
+      flash.now[:success] = '解答済にしました。'
+    end
   end
 
   def new

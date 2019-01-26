@@ -20,3 +20,27 @@
 .navbar-ul li a {
   color: white !important;
 }
+
+table {
+  width: 100%;
+}
+
+th {
+  text-align: center;
+  height: 30px;
+  background-color: #0c99b1;
+  color: white;
+}
+
+td {
+  text-align: center;
+  height: 30px;
+  max-width: 250px;
+  word-wrap: break-word;
+}
+
+.return-link {
+  text-align: center;
+  font-weight: bold;
+  margin: 20px 0 20px;
+}

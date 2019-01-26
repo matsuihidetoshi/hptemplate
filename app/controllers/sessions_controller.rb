@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
     password = params[:session][:password]
     if login(email, password)
       flash[:success] = '管理者ページにログインしました'
-      redirect_to questions_path
+      redirect_to users_path
     else
       flash.now[:danger] = '管理者ページにログインできませんでした'
       render :new
