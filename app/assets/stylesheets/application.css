@@ -17,6 +17,10 @@
  */
 /*// Custom bootstrap variables must be set or imported *before* bootstrap.*/
 
+html, body {
+  height: 100%;
+}
+
 .navbar-ul li a {
   color: white !important;
 }
