@@ -17,8 +17,31 @@
  */
 /*// Custom bootstrap variables must be set or imported *before* bootstrap.*/
 
-html, body {
-  height: 100%;
+.component {
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+}
+
+.inner {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+}
+
+.inner_header {
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.inner_sub {
+  font-weight: bold;
+  font-size: 18px;
+  margin-left: 10px;
+}
+
+.container-fruid {
+  margin-top: -20px;
 }
 
 .navbar-ul li a {
