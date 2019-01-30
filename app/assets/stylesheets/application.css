@@ -34,6 +34,10 @@
   font-weight: bold;
 }
 
+.inner_header div {
+  display: inline-block;
+}
+
 .inner_sub {
   font-weight: bold;
   font-size: 18px;
