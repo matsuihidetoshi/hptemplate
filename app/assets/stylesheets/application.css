@@ -74,6 +74,11 @@
   margin-top: 80px;
 }
 
+.row {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
 table {
   width: 100%;
 }
