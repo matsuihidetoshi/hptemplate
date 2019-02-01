@@ -46,6 +46,21 @@
   margin-left: 10px;
 }
 
+.root_title {
+  margin-top: 150px;
+  color: white;
+}
+
+.service_table tr th div {
+  font-size: 20px;
+  font-weight: bold;
+
+}
+
+.service_table tr * div {
+  display: inline-block;
+}
+
 @keyframes fade_in {
   from {
     opacity: 0;
