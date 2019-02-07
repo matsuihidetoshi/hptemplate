@@ -1,4 +1,6 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: 'from@example.com'
-  layout 'mailer'
+  default from: 'partyrockeverydayimshufflin@gmail.com'
+  def sendmail_confirm(user)    
+    mail to: user.email, subject: "[HOME PAGE]お問い合わせがありました"
+  end
 end
